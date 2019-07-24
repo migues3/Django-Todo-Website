@@ -1,0 +1,98 @@
+/* CSS for nav */
+.bg-steel {
+    background-color: #5f788a;
+}
+
+.navbar-nav {
+    color: #cbd5db;
+}
+
+.nav-link {
+    color: #cbd5db;
+}
+
+.navbar-nav {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+
+/* CSS for buttons and todo form */
+.todo_form {
+    margin-top: 20px;
+    padding-left: 40px;
+    padding right: 40px;
+}
+
+.delcompleted {
+    margin-top: 20px;
+    margin-left: 410px;
+}
+
+.delall {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.todo-complete {
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+}
+
+.noncomplete {
+    color: black;
+    font-weight: bold;
+}
+
+.noncomplete:hover {
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+}
+
+
+/* CSS for body/home page */
+body {
+    background-color: beige;
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+.main_title {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-fluid {
+    margin-top: 100px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.alert {
+    margin-top: 57px;
+}
+
+.content-section {
+    margin-top: 70px;
+}
+
+.logout-title {
+    margin-top: 70px;
+    text-align: center;
+}
+
+
+.login-again {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+.todo-list {
+    margin-top: 20px;
+}

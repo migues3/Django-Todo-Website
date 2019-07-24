@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% block content %}
+    <div class="container-fluid">
+        <h1 class="main_title">My Todo List</h1>
+
+        <form class="todo_form" action="/add" method="POST">
+            {% csrf_token %}
+            <div class="input-group input-group-lg">
+                {{ form.text }}
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="submit">ADD</button>
+                </div>
+            </div>
+        </form>
+
+        <a href="/deletecompleted"><button class="btn btn-success btn-lg delcompleted" type="submit">DELETE COMPLETED</button></a>
+        <a href="/deleteall"><button class="btn btn-success btn-lg delall" type="submit">DELETE ALL</button></a>
+
+        <ul class="todo-list">
+            {% for todo in todo_list %}
+                {% if todo.complete %}
+                    <li class="list-group-item todo-complete">{{ todo.text }}</li>
+                {% else %}
+                    <a href="{% url 'complete' todo.id %}" class="noncomplete"><li class="list-group-item">{{ todo.text }}</li></a>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
