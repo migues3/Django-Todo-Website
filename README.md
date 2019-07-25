@@ -1,4 +1,7 @@
-# Django-Todo-App
+# Django-Todo-Website
+This website is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. 
+
+# How it works
 
 # Things that can be added:
 - Password resets for users who have forgotten their password
