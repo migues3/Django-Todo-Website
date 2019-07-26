@@ -1,4 +1,4 @@
-# Django-Todo-Website
+# Django-Todo-App
 This webapp is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. Note that this webapp is not active since its not production ready. This webapp was created to learn about django and web development.
 
 # How it works
