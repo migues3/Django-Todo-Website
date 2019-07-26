@@ -19,7 +19,12 @@ Once logged in, you will be able to add tasks or todos to your Todlist by simply
 ![HomePage once logged in](https://i.imgur.com/LKWUUHj.png)
 
 You will also have the options to delete all completed tasks and delete all tasks.
+
 ![Delete Completed feature](https://i.imgur.com/5njGYwm.png) ![Delete All feature](https://i.imgur.com/78JW17j.png)
+
+Finally, you can logout by clicking the "logout" option in the navbar which will redirect you to the logout option where you will have the option to login in cause you logged out by accident.
+
+![Logout Page](https://i.imgur.com/JHTTmjV.png)
 
 # Things that can be added:
 - Password resets for users who have forgotten their password
