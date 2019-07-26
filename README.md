@@ -4,7 +4,7 @@ This webapp is a basic todo list for users to list the things that they need to 
 # How it works
 When a user first visits the webapp they will be greeted with the homepage, shown below, where thier Todo list resides. The user will need register before adding anything to their Todo list. The user needs to register in order to save thier Todo list so that they can come back later to work on their list.
 
-![Initial HomePage](https://imgur.com/zIWLYRv)
+![Initial HomePage](https://i.imgur.com/zIWLYRv.png)
 
 # Things that can be added:
 - Password resets for users who have forgotten their password
