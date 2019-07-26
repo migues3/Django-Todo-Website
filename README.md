@@ -14,9 +14,12 @@ Once you have registered an account you will be redirected to the login page whi
 
 ![Login Page](https://i.imgur.com/AKo5UXD.png)
 
-Once logged in, you will be able to add tasks or todos to your Todlist by simply typing what you need to do in the text box and clicking add. When you have completed one of your tasks you can label it as completed by clicking on the task where the text will turn read and have a line crossing through it. Notice that when you logged in, the nav bar options change to reflect the options you have as a logged in user.
+Once logged in, you will be able to add tasks or todos to your Todlist by simply typing what you need to do in the text box and clicking add. When you have completed one of your tasks you can label it as completed by clicking on the task which will change the text color to red and cross a line through the text. Notice that when you logged in, the nav bar options change to reflect the options you have as a logged in user.
 
 ![HomePage once logged in](https://i.imgur.com/LKWUUHj.png)
+
+You will also have the options to delete all completed tasks and delete all tasks.
+![Delete Completed feature](https://i.imgur.com/5njGYwm.png) ![Delete All feature](https://i.imgur.com/78JW17j.png)
 
 # Things that can be added:
 - Password resets for users who have forgotten their password
