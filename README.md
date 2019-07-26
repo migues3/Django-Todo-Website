@@ -2,14 +2,21 @@
 This webapp is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. Note that this webapp is not active since its not production ready. This webapp was created to learn about django and web development.
 
 # How it works
-When a user first visits the webapp they will be greeted with the homepage, shown below, where their Todo list resides. The user will need register before adding anything to their Todo list. The user needs to register in order to save thier Todo list so that they can come back later to work on their list.
+When you first visit the webapp you will be greeted with the homepage, shown below, where your Todo list resides. However, you will need register before adding anything to your Todo list in order to save your Todo list so that you can come back later to work on your list.
+
 ![Initial HomePage](https://i.imgur.com/zIWLYRv.png)
 
-Below is the registration place where users register for an account. Like all websites, username and password validations are run to ensure that the user meets all password requirements and registers with a unique username.
+Below is the registration place where you register for an account. Like all websites, username and password validations are run to ensure that you meet all password requirements and you register with a unique username.
+
 ![Registration Page](https://i.imgur.com/8Rstkws.png)
 
-Once the user has registered an account they will be redirected to the login page which is shown below.
+Once you have registered an account you will be redirected to the login page which is shown below.
+
 ![Login Page](https://i.imgur.com/AKo5UXD.png)
+
+Once logged in, you will be able to add tasks or todos to your Todlist by simply typing what you need to do in the text box and clicking add. When you have completed one of your tasks you can label it as completed by clicking on the task where the text will turn read and have a line crossing through it. Notice that when you logged in, the nav bar options change to reflect the options you have as a logged in user.
+
+![HomePage once logged in](https://i.imgur.com/LKWUUHj.png)
 
 # Things that can be added:
 - Password resets for users who have forgotten their password
