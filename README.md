@@ -27,5 +27,5 @@ Finally, you can logout by clicking the "logout" option in the navbar which will
 ![Logout Page](https://i.imgur.com/JHTTmjV.png)
 
 # Things that can be added:
-- Password resets for users who have forgotten their password
 - Invitation/Remind feature: Users would be able to invite/remind others about a todo such as an event they are attending.
+- Organizing Task: User is able to organize the things they need to do by a category.
