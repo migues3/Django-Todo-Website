@@ -1,4 +1,4 @@
-# Django-Todo-App
+# Django-Todo-Website
 This webapp is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. Note that this webapp is not active since its not production ready. This webapp was created to learn about django and web development.
 
 # How it works
@@ -27,5 +27,5 @@ Finally, you can logout by clicking the "logout" option in the navbar which will
 ![Logout Page](https://i.imgur.com/JHTTmjV.png)
 
 # Things that can be added:
-- Password resets for users who have forgotten their password
 - Invitation/Remind feature: Users would be able to invite/remind others about a todo such as an event they are attending.
+- Organizing Task: User is able to organize the things they need to do by a category.
