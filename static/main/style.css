@@ -24,7 +24,7 @@
 .todo_form {
     margin-top: 20px;
     padding-left: 40px;
-    padding right: 40px;
+    padding-right: 40px;
 }
 
 .delcompleted {
@@ -54,6 +54,40 @@
     font-weight: bold;
 }
 
+/* Edits elements that contains "todo-category" in their class attribute. Pretty useful! */
+[class*="todo-category"] {
+    font-size: 10px;
+    vertical-align: middle;
+    color: white;
+    padding: 10px;
+    width: 75px;
+    text-align: center;
+    border-radius: 250px;
+    float: right;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.todo-category-Home {
+    background: #0000ff;
+}
+
+.todo-category-Work {
+    background: #3f4a42;
+}
+
+.todo-category-School {
+    background: #e68f17;
+}
+
+.todo-category-General {
+    background: #b5128f;
+}
+
+.todo-category-Cleaning {
+    background: #0c8a13;
+}
 
 /* CSS for body/home page */
 body {

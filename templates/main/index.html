@@ -11,17 +11,37 @@
                     <button class="btn btn-danger" type="submit">ADD</button>
                 </div>
             </div>
+
+            <br>
+
+            <div class="inputCategory">
+                <select name="category_select">
+                    <option>Choose a category</option>
+                    {% for category in categories %}
+                        <option class="" value="{{ category }}" name="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
         </form>
 
-        <a href="/deletecompleted"><button class="btn btn-danger btn-lg delcompleted" type="submit">DELETE COMPLETED</button></a>
-        <a href="/deleteall"><button class="btn btn-danger btn-lg delall" type="submit">DELETE ALL</button></a>
+        <a href="{% url 'deletecompleted' %}" class="delcompleted"><button class="btn btn-danger btn-lg" type="submit">DELETE COMPLETED</button></a>
+        <a href="{% url 'deleteall' %}" class="delcompleted"><button class="btn btn-danger btn-lg" type="submit">DELETE ALL</button></a>
 
         <ul class="todo-list">
             {% for todo in todo_list %}
                 {% if todo.complete %}
-                    <li class="list-group-item todo-complete">{{ todo.text }}</li>
+                    <li class="list-group-item todo-complete">
+                        <span class="todo-text-complete">{{ todo.text }}</span>
+                        <span class="todo-category-{{ todo.category }}">{{ todo.category }}</span>
+                    </li>
                 {% else %}
-                    <a href="{% url 'complete' todo.id %}" class="noncomplete"><li class="list-group-item">{{ todo.text }}</li></a>
+                    <a href="{% url 'complete' todo.id %}" class="noncomplete">
+                        <li class="list-group-item">
+                            <span class="todo-text">{{ todo.text }}</span>
+                            <span class="todo-category-{{ todo.category }}">{{ todo.category }}</span>
+                        </li>
+                    </a>
                 {% endif %}
             {% endfor %}
         </ul>

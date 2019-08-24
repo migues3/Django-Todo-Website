@@ -16,7 +16,9 @@ def index(request):
 
     user = User.objects.get(pk=request.user.id)
     todo_list = user.todo_set.all()
-    return render(request, 'main/index.html', {'todo_list': todo_list, 'form': form})
+    contacts = user.contact_set.all().order_by('id')
+    categories = Category.objects.all()
+    return render(request, 'main/index.html', {'todo_list': todo_list, 'form': form, 'categories': categories})
 
 def add(request):
     if request.user.is_authenticated is False:
@@ -25,7 +27,9 @@ def add(request):
 
     form = TodoForm(request.POST)
     if form.is_valid():
-        new_todo = Todo(text = request.POST['text'], complete = False, username = request.user)
+        category = request.POST['category_select']
+        new_todo = Todo(text = request.POST['text'], complete = False,
+                        username = request.user, category = Category.objects.get(name=category))
         new_todo.save()
 
     return redirect('index')
