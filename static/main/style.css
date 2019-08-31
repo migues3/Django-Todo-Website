@@ -27,19 +27,9 @@
     padding-right: 40px;
 }
 
-.delcompleted {
-    margin-top: 20px;
-    margin-left: 410px;
-}
-
-.delall {
-    margin-top: 20px;
-    margin-left: 10px;
-}
-
 .todo-complete {
     text-decoration: line-through;
-    color: red;
+    color: #dc3545;
     font-weight: bold;
 }
 
@@ -50,7 +40,7 @@
 
 .noncomplete:hover {
     text-decoration: line-through;
-    color: red;
+    color: #dc3545 ;
     font-weight: bold;
 }
 
@@ -67,6 +57,10 @@
     font-weight: normal;
     text-transform: uppercase;
     margin-right: 20px;
+}
+
+.todo-category- {
+    background: transparent;
 }
 
 .todo-category-Home {
@@ -92,19 +86,20 @@
 /* CSS for body/home page */
 body {
     background-color: beige;
-    font-family: 'Open Sans', 'sans-serif';
+    font-family: 'Comic Sans MS', 'sans-serif';
 }
 
 .main_title {
     color: black;
     font-weight: bold;
     text-align: center;
+    font-family: "Comic Sans MS";
 }
 
 .container-fluid {
     margin-top: 100px;
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-left: 170px;
+    padding-right: 170px;
 }
 
 .alert {
@@ -129,4 +124,25 @@ body {
 
 .todo-list {
     margin-top: 20px;
+}
+
+.contact-email {
+    margin-left: 30px;
+}
+
+.contact-title {
+    text-align: center;
+}
+
+/* Contact Page */
+.contact-list a {
+    text-decoration: none;
+}
+
+.contact-list li {
+    color: black;
+}
+
+.contact-list li:hover {
+    color: #dc3545
 }

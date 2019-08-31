@@ -1,0 +1,53 @@
+{% extends "main/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container content-section">
+        
+        <form action="{% url 'editcontacts' %}" method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add a New Contact</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-danger" type="submit">Add Contact</button>
+            </div>
+        </form>
+
+        <!-- List of the user's contacts -->
+        <h1 class="contact-title">My Contacts</h1>
+        <br>
+        <ul class="list-group contact-list">
+            {% for contact in contacts %}
+                <!-- Triggers modal -->
+                <a class="contact-item" href="#" data-toggle="modal" data-target="#Modal">
+                    <li class="list-group-item">
+                        <span class="contact-name">{{ contact }}</span>
+                        <span class="contact-email">{{ contact.email }}</span>
+                    </li>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Delete Contact</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure you want to delete {{ contact }} as a contact?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                          <a href="{% url 'deletecontact' contact.id %}"><button type="button" class="btn btn-danger">Delete Contact</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

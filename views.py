@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 
 from .models import Todo
-from .forms import TodoForm, RegisterForm
+from .forms import TodoForm, RegisterForm, ContactForm
+from .tools import send_email
 
 
 def index(request):
@@ -22,15 +23,31 @@ def index(request):
 
 def add(request):
     if request.user.is_authenticated is False:
-        messages.warning(request, 'Please register to start your Todo List.')
+        messages.warning(request, 'Please register or login to start your Todo List.')
         return redirect('index')
 
     form = TodoForm(request.POST)
     if form.is_valid():
-        category = request.POST['category_select']
-        new_todo = Todo(text = request.POST['text'], complete = False,
-                        username = request.user, category = Category.objects.get(name=category))
-        new_todo.save()
+        if request.POST['text']:
+            text = request.POST['text']
+            category = request.POST['category_select']
+            contacts = request.POST.getlist('contact_select')
+            if category:
+                new_todo = Todo(text = text, complete = False,
+                            username = request.user, category = Category.objects.get(name=category))
+            else:
+                new_todo = Todo(text = text, complete = False, username = request.user)
+            if contacts:
+                send_email(contacts, text)
+            new_todo.save()
+        if 'delcompleted'  in request.POST:
+            for todo in Todo.objects.filter(username = request.user):
+                if todo.complete:
+                    todo.delete()
+        if 'delall' in request.POST:
+            for todo in Todo.objects.filter(username = request.user):
+                todo.delete()
+    return redirect('index')
 
     return redirect('index')
 
@@ -45,24 +62,27 @@ def complete(request, todo_id):
 
     return redirect('index')
 
-def deletecompleted(request):
-    if request.user.is_authenticated is False:
-        messages.warning(request, 'Please register to start your Todo List.')
-        return redirect('index')
+def contacts(request):
+    form = ContactForm()
+    user = User.objects.get(pk=request.user.id)
+    contacts = user.contact_set.all().order_by('id')
 
-    for todo in Todo.objects.filter(username = request.user):
-        if todo.complete:
-            todo.delete()
-    return redirect('index')
+    return render(request, 'main/contacts.html', {'form': form, 'contacts': contacts})
 
-def deleteall(request):
-    if request.user.is_authenticated is False:
-        messages.warning(request, 'Please register to start your Todo List.')
-        return redirect('index')
+def editcontacts(request):
+    form = ContactForm(request.POST)
+    if form.is_valid():
+        new_contact = Contact(first_name = request.POST['first_name'], last_name = request.POST['last_name'],
+                        email = request.POST['email'], username = request.user)
+        new_contact.save()
+        return redirect('contacts')
+    return redirect('contacts')
 
-    for todo in Todo.objects.filter(username = request.user):
-        todo.delete()
-    return redirect('index')
+def deletecontact(request, contact_id):
+    contact = Contact.objects.get(pk=contact_id)
+    contact.delete()
+
+    return redirect('contacts')
 
 def login(request):
     return render(request, 'main/login.html', {'title': 'Login'})

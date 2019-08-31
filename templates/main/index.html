@@ -3,8 +3,9 @@
     <div class="container-fluid">
         <h1 class="main_title">My Todo List</h1>
 
-        <form class="todo_form" action="/add" method="POST">
+        <form class="todo_form" action="{% url 'add' %}" method="POST">
             {% csrf_token %}
+
             <div class="input-group input-group-lg">
                 {{ form.text }}
                 <div class="input-group-append">
@@ -14,19 +15,58 @@
 
             <br>
 
-            <div class="inputCategory">
-                <select name="category_select">
-                    <option>Choose a category</option>
-                    {% for category in categories %}
-                        <option class="" value="{{ category }}" name="{{ category }}">{{ category }}</option>
-                    {% endfor %}
-                </select>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="inputCategory">
+                            <select class="selectpicker" data-style="btn-danger" name="category_select" title="Choose a category" data-live-search="true">
+                                {% for category in categories %}
+                                    <option value="{{ category }}" data-tokens="{{ category }}">{{ category }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="inputContact">
+                            <select class="selectpicker" data-style="btn-danger" name="contact_select" title="Choose a contact" data-live-search="true" multiple>
+                                {% for contact in contacts %}
+                                    <option value="{{ contact.id }}" data-tokens="{{ contact }}">{{ contact }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <button class="btn btn-danger" name="delcompleted" type="submit">DELETE COMPLETED</button>
+                    </div>
+                    <div class="col">
+                        <a href="#" data-toggle="modal" data-target="#Modal"><button class="btn btn-danger">DELETE ALL</button></a>
+                    </div>
+
+                    <!-- Modal for delete all button -->
+                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Delete All</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Are you sure want to delete all your todos?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                              <button class="btn btn-danger" name="delall" type="submit">Delete All</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </form>
-
-        <a href="{% url 'deletecompleted' %}" class="delcompleted"><button class="btn btn-danger btn-lg" type="submit">DELETE COMPLETED</button></a>
-        <a href="{% url 'deleteall' %}" class="delcompleted"><button class="btn btn-danger btn-lg" type="submit">DELETE ALL</button></a>
 
         <ul class="todo-list">
             {% for todo in todo_list %}
