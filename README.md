@@ -1,5 +1,5 @@
 # Django-Todo-Website
-This webapp is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. Note that this webapp is not active since its not production ready. This webapp was created to learn about django and web development.
+This website is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. Note that this website is not live since its not production ready. This webapp was created to learn about django and web development.
 
 # How it works
 When you first visit the webapp you will be greeted with the homepage, shown below, where your Todo list resides. However, you will need register before adding anything to your Todo list in order to save your Todo list so that you can come back later to work on your list.
