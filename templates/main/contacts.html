@@ -10,7 +10,7 @@
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-danger" type="submit">Add Contact</button>
+                <button class="btn btn-danger" type="submit"><i class="fas fa-plus"></i> Add Contact</button>
             </div>
         </form>
 
@@ -41,8 +41,8 @@
                           Are you sure you want to delete {{ contact }} as a contact?
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                          <a href="{% url 'deletecontact' contact.id %}"><button type="button" class="btn btn-danger">Delete Contact</button></a>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button>
+                          <a href="{% url 'deletecontact' contact.id %}"><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i> Delete Contact</button></a>
                         </div>
                       </div>
                     </div>

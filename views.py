@@ -19,7 +19,7 @@ def index(request):
     todo_list = user.todo_set.all()
     contacts = user.contact_set.all().order_by('id')
     categories = Category.objects.all()
-    return render(request, 'main/index.html', {'todo_list': todo_list, 'form': form, 'categories': categories})
+    return render(request, 'main/index.html', {'todo_list': todo_list, 'form': form, 'contacts': contacts})
 
 def add(request):
     if request.user.is_authenticated is False:
@@ -75,7 +75,6 @@ def editcontacts(request):
         new_contact = Contact(first_name = request.POST['first_name'], last_name = request.POST['last_name'],
                         email = request.POST['email'], username = request.user)
         new_contact.save()
-        return redirect('contacts')
     return redirect('contacts')
 
 def deletecontact(request, contact_id):

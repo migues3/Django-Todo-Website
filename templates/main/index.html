@@ -9,7 +9,7 @@
             <div class="input-group input-group-lg">
                 {{ form.text }}
                 <div class="input-group-append">
-                    <button class="btn btn-danger" type="submit">ADD</button>
+                    <button class="btn btn-danger" type="submit"><i class="fas fa-plus"></i> ADD</button>
                 </div>
             </div>
 
@@ -20,9 +20,11 @@
                     <div class="col">
                         <div class="inputCategory">
                             <select class="selectpicker" data-style="btn-danger" name="category_select" title="Choose a category" data-live-search="true">
-                                {% for category in categories %}
-                                    <option value="{{ category }}" data-tokens="{{ category }}">{{ category }}</option>
-                                {% endfor %}
+                                <option data-icon="fas fa-home" value="Home" data-tokens="Home">Home</option>
+                                <option data-icon="fas fa-briefcase" value="Work" data-tokens="Work">Work</option>
+                                <option data-icon="fas fa-school" value="School" data-tokens="School">School</option>
+                                <option data-icon="fas fa-broom" value="Cleaning" data-tokens="Cleaning">Cleaning</option>
+                                <option data-icon="far fa-smile" value="Personal" data-tokens="Personal">Personal</option>
                             </select>
                         </div>
                     </div>
@@ -31,17 +33,17 @@
                         <div class="inputContact">
                             <select class="selectpicker" data-style="btn-danger" name="contact_select" title="Choose a contact" data-live-search="true" multiple>
                                 {% for contact in contacts %}
-                                    <option value="{{ contact.id }}" data-tokens="{{ contact }}">{{ contact }}</option>
+                                    <option data-icon="fas fa-user-friends" value="{{ contact.id }}" data-tokens="{{ contact }}">{{ contact }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                     </div>
 
                     <div class="col">
-                        <button class="btn btn-danger" name="delcompleted" type="submit">DELETE COMPLETED</button>
+                        <button class="btn btn-danger" name="delcompleted" type="submit"><i class="fas fa-trash"></i> DELETE COMPLETED</button>
                     </div>
                     <div class="col">
-                        <a href="#" data-toggle="modal" data-target="#Modal"><button class="btn btn-danger">DELETE ALL</button></a>
+                        <a href="#" data-toggle="modal" data-target="#Modal"><button class="btn btn-danger"><i class="fas fa-trash"></i> DELETE ALL</button></a>
                     </div>
 
                     <!-- Modal for delete all button -->
@@ -58,8 +60,8 @@
                               Are you sure want to delete all your todos?
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button class="btn btn-danger" name="delall" type="submit">Delete All</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button>
+                              <button class="btn btn-danger" name="delall" type="submit"><i class="fas fa-trash"></i> Delete All</button>
                             </div>
                           </div>
                         </div>
