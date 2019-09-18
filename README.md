@@ -3,11 +3,13 @@ This website is a basic todo list for users to list the things that they need to
 
 # Resources Used
 Below are the python libraries, frameworks, and other technologies that I used to create this project:
+* Python
+* HTML and CSS
 * Django - **pip install Django**
 * Django Crispy Forms (Stylize built-in Django forms) - **pip install django-crispy-forms**
 * Bootstrap (For stylizing) - **https://getbootstrap.com/docs/4.3/getting-started/introduction/**
 * Bootstrap-Select (To stylize "Select" html element) - **https://developer.snapappointments.com/bootstrap-select/**
-* Fontawsome (for icons) - **https://fontawesome.com/**
+* Fontawsome (For icons) - **https://fontawesome.com/**
 
 
 # How it works
