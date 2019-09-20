@@ -21,7 +21,9 @@ Once logged in, the user will be able to add tasks to their Todo list by simply 
 
 ![Adding a task](/gifs/adding_task.gif)
 
-You will also have the options to delete all completed tasks and delete all tasks.
+In order to take advantage of the feature of reminding others of a task, users will need to add them to their saved contacts. This is very simple to do, users will only need to provide a full name and an email in order to save someone as a contact and be able to remind them of furture tasks.
+
+![Adding a contact](/gifs/adding_contact.gif)
 
 ![Delete Completed feature](https://i.imgur.com/5njGYwm.png) ![Delete All feature](https://i.imgur.com/78JW17j.png)
 
