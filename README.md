@@ -17,19 +17,9 @@ When you first visit the website you will be greeted with the homepage, shown be
 
 ![Registrating and account and loggin in](/gifs/registering_account.gif)
 
-![Initial HomePage](https://i.imgur.com/zIWLYRv.png)
+Once logged in, the user will be able to add tasks to their Todo list by simply typing what their task in the text box and clicking add. Users are able to categorize the task by default categories which are listed above and are able to select a contact or contacts they have saved to remind them of the task.
 
-Below is the registration place where you register for an account. Like all websites, username and password validations are run to ensure that you meet all password requirements and you register with a unique username.
-
-![Registration Page](https://i.imgur.com/8Rstkws.png)
-
-Once you have registered an account you will be redirected to the login page which is shown below.
-
-![Login Page](https://i.imgur.com/AKo5UXD.png)
-
-Once logged in, you will be able to add tasks or todos to your Todlist by simply typing what you need to do in the text box and clicking add. When you have completed one of your tasks you can label it as completed by clicking on the task which will change the text color to red and cross a line through the text. Notice that when you logged in, the nav bar options change to reflect the options you have as a logged in user.
-
-![HomePage once logged in](https://i.imgur.com/LKWUUHj.png)
+![Adding a task](/gifs/adding_task.gif)
 
 You will also have the options to delete all completed tasks and delete all tasks.
 
