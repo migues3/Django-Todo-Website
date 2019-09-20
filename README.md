@@ -1,5 +1,5 @@
 # Django-Todo-Website
-This website is a basic todo list for users to list the things that they need to do! Users are able to categorize their tasks using default categories which are: Home, Work, School, Cleaning, and Personal. Users can add contacts and remind them of tasks via email. Examples of the use of this feature is to remind people of events and important appointments. NOTE THIS WEBSITE IS NOT LIVE.
+This website is a basic todo list for users to list the things that they need to do! Users are able to categorize their tasks using default categories which are: Home, Work, School, Cleaning, and Personal. Users can also add contacts and remind them of tasks via email. Examples of the use of this feature is to remind people of events and important appointments. NOTE THIS WEBSITE IS NOT LIVE.
 
 # Resources Used
 Below are the python libraries, frameworks, and other technologies that I used to create this project:
@@ -13,7 +13,9 @@ Below are the python libraries, frameworks, and other technologies that I used t
 
 
 # How it works
-When you first visit the webapp you will be greeted with the homepage, shown below, where your Todo list resides. However, you will need register before adding anything to your Todo list in order to save your Todo list so that you can come back later to work on your list.
+When you first visit the website you will be greeted with the homepage, shown below, where your Todo list resides. However, you will need register an account before adding anything to your Todo list. Registering for an account requires a username, email, and a password. Once registered, the user can login and start addings tasks to their todo list and adding new contacts. Notice once a user is logged in, the navbar options change to reflect the choices that a logged in user has.
+
+![Registrating and account and loggin in](/gifs/registering_account.gif)
 
 ![Initial HomePage](https://i.imgur.com/zIWLYRv.png)
 
