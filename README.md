@@ -1,5 +1,16 @@
 # Django-Todo-Website
-This website is a basic todo list for users to list the things that they need to do! I used Django to power the website, bootstrap and css to stylize it, and of course html. Note that this website is not live since its not production ready. This webapp was created to learn about django and web development.
+This website is a basic todo list for users to list the things that they need to do! Users are able to categorize their tasks using default categories which are: Home, Work, School, Cleaning, and Personal. Users can add contacts and remind them of tasks via email. Examples of the use of this feature is to remind people of events and important appointments. NOTE THIS WEBSITE IS NOT LIVE.
+
+# Resources Used
+Below are the python libraries, frameworks, and other technologies that I used to create this project:
+* Python
+* HTML and CSS
+* Django - **pip install Django**
+* Django Crispy Forms (Stylize built-in Django forms) - **pip install django-crispy-forms**
+* Bootstrap (For stylizing) - **https://getbootstrap.com/docs/4.3/getting-started/introduction/**
+* Bootstrap-Select (To stylize "Select" html element) - **https://developer.snapappointments.com/bootstrap-select/**
+* Fontawsome (For icons) - **https://fontawesome.com/**
+
 
 # How it works
 When you first visit the webapp you will be greeted with the homepage, shown below, where your Todo list resides. However, you will need register before adding anything to your Todo list in order to save your Todo list so that you can come back later to work on your list.
