@@ -25,7 +25,9 @@ In order to take advantage of the feature of reminding others of a task, users w
 
 ![Adding a contact](/gifs/adding_contact.gif)
 
-![Delete Completed feature](https://i.imgur.com/5njGYwm.png) ![Delete All feature](https://i.imgur.com/78JW17j.png)
+Once the user had added a contact or contacts they will be able to remind them of a task via email. When adding a task, users simply find the contact or contacts they want to remind thorugh the "Choose a contact" dropdown menu. Emails will be sent once the user as added the task.
+
+![Adding a task and reminding contacts](gifs/adding_contact.gif)
 
 Finally, you can logout by clicking the "logout" option in the navbar which will redirect you to the logout option where you will have the option to login in case you logged out by accident.
 
