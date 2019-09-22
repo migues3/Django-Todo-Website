@@ -23,11 +23,11 @@ Once logged in, the user will be able to add tasks to their Todo list by simply 
 
 In order to take advantage of the feature of reminding others of a task, users will need to add them to their saved contacts. This is very simple to do, users will only need to provide a full name and an email in order to save someone as a contact and be able to remind them of furture tasks.
 
-![Adding a contact](/gifs/inviting_contact.gif)
+![Adding a contact](/gifs/adding_contact.gif)
 
 Once the user had added a contact or contacts they will be able to remind them of a task via email. When adding a task, users simply find the contact or contacts they want to remind thorugh the "Choose a contact" dropdown menu. Emails will be sent once the user as added the task.
 
-![Adding a task and reminding contacts](gifs/adding_contact.gif)
+![Adding a task and reminding contacts](gifs/inviting_contact.gif)
 
 Finally, you can logout by clicking the "logout" option in the navbar which will redirect you to the logout option where you will have the option to login in case you logged out by accident.
 
