@@ -29,7 +29,7 @@ Once the user had added a contact or contacts they will be able to remind them o
 
 ![Adding a task and reminding contacts](gifs/inviting_contact.gif)
 
-When users have completed a task, they can label that task as completed by clicking on the task and the text would not appear in red with a line across it. Users are also able to delete only completed tasks and delete all tasks where a modal is shown to confirm that the user wants to delete all tasks.
+When users have completed a task, they can label that task as completed by clicking on the task and the text would now appear in red with a line across it. Users are also able to delete only completed tasks and delete all tasks where a modal is shown to confirm that the user wants to delete all tasks.
 
 ![Deleting tasks](gifs/deleting_tasks.gif)
 
