@@ -33,6 +33,11 @@ When users have completed a task, they can label that task as completed by click
 
 ![Deleting tasks](gifs/deleting_tasks.gif)
 
+Users can also delete contacts by visting the "Edit Contacts" page. A modal will be shown to confrim that the user wants to delete the contact they selected.
+
+![Deleting Contacts](gifs/deleting_contact.gif)
+
 # Things that can be added or improved:
-- Customizable categories
+- Customizable categories: Users are able to add a category that they can use to label their tasks.
 - Improve speed when sending contact reminders
+- Edit Contacts' Information: Users can change a contact's name and or email.
