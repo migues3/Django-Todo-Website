@@ -29,10 +29,10 @@ Once the user had added a contact or contacts they will be able to remind them o
 
 ![Adding a task and reminding contacts](gifs/inviting_contact.gif)
 
-Finally, you can logout by clicking the "logout" option in the navbar which will redirect you to the logout option where you will have the option to login in case you logged out by accident.
+When users have completed a task, they can label that task as completed by clicking on the task and the text would not appear in red with a line across it. Users are also able to delete only completed tasks and delete all tasks where a modal is shown to confirm that the user wants to delete all tasks.
 
-![Logout Page](https://i.imgur.com/JHTTmjV.png)
+![Deleting tasks](gifs/deleting_tasks.gif)
 
-# Things that can be added:
-- Invitation/Remind feature: Users would be able to invite/remind others about a todo such as an event they are attending.
-- Organizing Task: User is able to organize the things they need to do by a category.
+# Things that can be added or improved:
+- Customizable categories
+- Improve speed when sending contact reminders
